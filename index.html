@@ -26,6 +26,17 @@
         <option value="{{category}}">{{category}}</option>
       </script>
 
+      <script id="repo-template" type="text/x-handlebars-template">
+        <li>
+          <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+          <p>Description: {{description}}</p>
+          <p>Language: {{language}}</p>
+          <p>Created: {{created_at}}</p>
+          <p>Last updated: {{updated_on}}</p>
+          <p></p>
+        </li>
+      </script>
+
   </head>
 
   <body>
@@ -57,11 +68,32 @@
           </ul>
         </div>
       </section>
+      <section id="about" class="tab-content">
+        <header>
+          Welcome to My Blog
+        </header>
+        <section>
+          <h2>Check out my projects on GitHub:</h2>
+          <ul>
+            <li>Coding projects go here</li>
+          </ul>
+        </section>
+      </section>
+
     </main>
-    <script src="vendor/scripts/jquery-2.1.4.js"></script>
-    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/marked.js"></script>
+    <script src="/vendor/scripts/html5sql.js"></script>
+    <script src="/vendor/scripts/webdb.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="/vendor/scripts/githubToken.js"></script>
 
     <script src="scripts/models/portfolio.js"></script>
+    <script src="scripts/models/repos.js"></script>
+
     <script src="scripts/views/portfolioView.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+
     <script src="scripts/controllers/projectController.js"></script>
   </body>
