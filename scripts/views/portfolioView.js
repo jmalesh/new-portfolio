@@ -5,9 +5,9 @@
   var render = function(project, projectTemplateId) {
     var template = Handlebars.compile($(projectTemplateId).text());
 
-    project.daysAgo = parseInt((new Date() - new Date(article.publishedOn)) / 60 / 60 / 24 / 1000);
-    project.publishStatus = article.publishedOn ? 'published ' + article.daysAgo + ' days ago' : '(draft)';
-    project.body = marked(article.body);
+    project.daysAgo = parseInt((new Date() - new Date(project.publishedOn)) / 60 / 60 / 24 / 1000);
+    project.publishStatus = project.publishedOn ? 'published ' + project.daysAgo + ' days ago' : '(draft)';
+    project.body = marked(project.body);
 
     return template(project);
   };
