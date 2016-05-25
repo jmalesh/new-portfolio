@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+  <title>Jam's Portfolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+<!-- project handlebar template -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article class="{{category}}" data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h2 class="heading-title">{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{author}}">{{author}}</a></address>
+            {{publishStatus}}
+          </div>
+        </header>
+      </script>
+<!-- Generate Project category filter -->
+      <script id="category-filter-template" type="text/x-handlebars-template">
+        <option value="{{category}}">{{category}}</option>
+      </script>
+
+  </head>
+
+  <body>
+    <header class="site-header clearfix">
+      <section class="heading-group-h1">
+        <h1>Jess Malesh</h1>
+        <img src="styles/me.jpg" alt="me" />
+      </section>
+      <nav class="main-nav">
+        <div class="icon-menu"></div>
+          <ul>
+            <li class="tab" data-content="projects"><a href="#" class="icon-home">Home</a></li>
+            <li class="tab" data-content="education"><a href="#" class="icon-library">About</a></li>
+            <li><a href="http://twitter.com/JessMalesh" target="_blank" class="icon-twitter">Twitter</a></li>
+            <li><a href="http://github.com/jmalesh" target="_blank" class="icon-github">GitHub</a></li>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- filter projects by category -->
+      <section id="projects" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">--Filter by Category--</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+
+    <script src="scripts/models/portfolio.js"></script>
+    <script src="scripts/views/portfolioView.js"></script>
+    <script src="scripts/controllers/projectController.js"></script>
+  </body>
