@@ -1,4 +1,4 @@
-/* TODO: Add a rule for images, so they never exceed their container's width. */
+
 img {
   /*width: 100%;
   height: auto;*/
@@ -13,6 +13,7 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: black;
+  font-family: 'PT Sans', sans-serif;
 }
 
 hr {
@@ -22,6 +23,8 @@ hr {
 
 /*TEXT STYLES
 =======================================*/
+
+
 p {
   font-size: 1em;
 }

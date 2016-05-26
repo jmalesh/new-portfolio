@@ -31,7 +31,7 @@
       this.select();
     });
 
-    $('#new-form').on('change', 'input, textarea', projectView.create);
+    $('#new-form').on('change', 'input, textarea', portfolioView.create);
   };
 
   portfolioView.create = function() {
