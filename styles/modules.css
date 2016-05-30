@@ -8,6 +8,23 @@
   padding: 0 0 .2em 1em;
 }
 
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow:
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+
 /* TODO: Add styles for the icon-menu class (whether it be the hamburger font
   or an image of your choosing). It should be bigger, and off to the right. */
 .icon-menu {
